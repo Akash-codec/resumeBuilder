@@ -1,4 +1,4 @@
-export const BASE_URL = "https://resume-builder-y07n.onrender.com"
+export const BASE_URL = "https://resumebuilder-oy1b.onrender.com"
 
 //utils/apiPaths.js
 export const API_PATHS = {
