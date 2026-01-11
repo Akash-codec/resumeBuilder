@@ -19,7 +19,7 @@ const Signup = ({ setCurrentPage }) => {
   const { updateUser } = useContext(UserContext);
   const handleSignup = async (e) => {
     e.preventDefault();
-    let profileImageurl = "";
+    let profileImageURL = "";
 
     if (!fullName) {
       setError("Please enter full name.");
