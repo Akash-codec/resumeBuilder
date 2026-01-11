@@ -64,7 +64,7 @@ const Signup = ({ setCurrentPage }) => {
       if (error.response && error.response.data.message) {
         setError(error.response.data.message);
       } else {
-        setError("Something went wrong try agian.");
+        setError("Something went wrong try agian.",error.response);
       }
     }
   };
