@@ -9,6 +9,7 @@ const resumeRoutes = require("./Routes/resumeRoutes.js");
 
 
 const app = express();
+app.set("trust proxy", 1);
 
 // Middleware to handle CORS
 app.use(
