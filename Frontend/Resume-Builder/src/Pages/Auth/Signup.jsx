@@ -43,14 +43,14 @@ const Signup = ({ setCurrentPage }) => {
       //Upload image if present
       if (profilePic) {
         const imgUploadRes = await uploadImage(profilePic);
-        profileImageurl = imgUploadRes.imageUrl;
+        profileImageURL = imgUploadRes.imageUrl;
       }
 
       const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {
         name: fullName,
         email,
         password,
-        profileImageurl,
+        profileImageURL,
       });
 
       const { token } = response.data;
