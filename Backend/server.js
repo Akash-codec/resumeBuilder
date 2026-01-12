@@ -37,8 +37,8 @@ app.use("/api/resume", resumeRoutes);
 app.use(express.static(path.join(__dirname, "client/build")));
 
 // React Router fallback
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 
 // Start server
