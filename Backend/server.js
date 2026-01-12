@@ -33,13 +33,6 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes); 
 
-// Serve frontend build
-app.use(express.static(path.join(__dirname, "client/build")));
-
-// React Router fallback
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
-});
 
 // Start server
 const PORT = process.env.PORT || 8000;
